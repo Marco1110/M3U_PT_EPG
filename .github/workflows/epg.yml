@@ -1,1 +1,33 @@
+name: Update EPG
+on:
+  schedule:
+    - cron: "0 0 * * *"
 
+jobs:
+  Update-epg:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: checkout
+        uses: actions/checkout@v2
+        
+      - name: install XMLTV and URI::Encode
+        run: sudo apt-get install -y xmltv liburi-encode-perl
+        
+      - name: update EPG (Vodafone)
+        run: cd epg && sh epg-vodafone.sh
+        
+      - name: update EPG (Meo)
+        run: cd epg && sh epg-meo.sh
+
+      - name: setup git config
+        run: |
+          git config user.name "M3UPT Bot"
+          git config user.email "<>"
+      - name: commit
+        run: |
+          git pull
+          cd epg
+          git add tv_grab_pt_vodafone epg-vodafone.xml epg-vodafone.xml.gz tv_grab_pt_meo epg-meo.xml epg-meo.xml.gz
+          git commit -m "Update EPG"
+          git push origin main
