@@ -101,6 +101,12 @@ http://200.4.96.59:8004/play/a0f4/index.m3u8
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 https://video-auth6.iol.pt/live_tvi_internacional/live_tvi_internacional/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC8xMS8yMDIyIDQ6MjE6MjAgUE0maGFzaF92YWx1ZT1HdkI5bXkrYndxYTh0QWJBZmtBVmV3PT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9ZDRiNjI1YWEtN2U2MC00NmQ4LWJlMmEtODdmMmI0ZmUxMGNj/
 
+#EXTINF:-1 group-title="TV" tvg-id="TVIAfr.pt" tvg-logo="https://cdn.iol.pt/img/logostvi/branco/tviafrica.png",TVI Africa
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+https://video-auth6.iol.pt/live_tvi_africa/live_tvi_africa/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC8xMS8yMDIyIDQ6MjE6MjAgUE0maGFzaF92YWx1ZT1HdkI5bXkrYndxYTh0QWJBZmtBVmV3PT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9ZDRiNjI1YWEtN2U2MC00NmQ4LWJlMmEtODdmMmI0ZmUxMGNj/
+
+
 #EXTINF:-1 group-title="TV" tvg-id="TVIFIC.meo.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI-Ficção.png",TVI Ficção
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
